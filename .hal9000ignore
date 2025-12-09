@@ -1,0 +1,14 @@
+# Reduce token count for React projects
+package-lock.json
+yarn.lock
+*.md
+!README.md
+public/
+*.svg
+*.png
+*.ico
+tsconfig.json
+.eslintrc*
+.prettierrc*
+__snapshots__/
+*.snap
