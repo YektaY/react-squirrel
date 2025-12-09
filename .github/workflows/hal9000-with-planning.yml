@@ -50,7 +50,7 @@ jobs:
       # (Optional) Stanford AI Gateway URL
       # api_base: https://your-stanford-gateway-url
     secrets:
-      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
 
   # Retry plan generation
   retry-plan:
@@ -65,7 +65,7 @@ jobs:
       planning_model: anthropic/claude-opus-4-20250514
       execution_model: anthropic/claude-sonnet-4-20250514
     secrets:
-      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
 
   # Phase 2a: Execute plan when approved (with retries)
   execute-plan:
@@ -81,7 +81,7 @@ jobs:
       execution_model: anthropic/claude-sonnet-4-20250514
       max_retries: 3
     secrets:
-      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
 
   # Phase 2b: Execute plan with single attempt (no retries - cheaper/faster)
   execute-plan-single:
@@ -96,7 +96,7 @@ jobs:
       execution_model: anthropic/claude-sonnet-4-20250514
       max_retries: 1
     secrets:
-      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
 
   # Phase 3a: Create branch only when code changes are approved with /approve
   approve-changes:
@@ -124,4 +124,4 @@ jobs:
       pr_model: anthropic/claude-haiku-3-5-20241022
     secrets:
       PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
-      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}

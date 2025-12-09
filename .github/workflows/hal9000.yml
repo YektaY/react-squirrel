@@ -52,7 +52,7 @@ jobs:
       
       trigger_type: label
     secrets:
-      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
 
   # Retry job: triggered when someone comments '/retry' on an issue with the label
   retry-issue:
@@ -67,7 +67,7 @@ jobs:
       model: anthropic/claude-sonnet-4-20250514
       trigger_type: retry
     secrets:
-      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
 
   # Approval job: triggered when someone reacts with 👍 or comments /approve
   # This creates a branch but NOT a PR
@@ -97,4 +97,4 @@ jobs:
       pr_model: anthropic/claude-haiku-3-5-20241022
     secrets:
       PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
-      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
