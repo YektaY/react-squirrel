@@ -1,14 +1,36 @@
 # Reduce token count for React projects
 package-lock.json
 yarn.lock
+
+# Markdown docs (except README)
 *.md
 !README.md
+*.rst
+
+# Config files
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+.eslintrc*
+.eslintignore
+.prettierrc*
+.prettierignore
+.gitattributes
+.git_archival.txt
+
+# Assets
 public/
 *.svg
 *.png
 *.ico
-tsconfig.json
-.eslintrc*
-.prettierrc*
+
+# Test artifacts
 __snapshots__/
 *.snap
+
+# CI/CD (unless you're changing these)
+.github/
+.husky/
+
+# Data files
+*.csv
