@@ -1,0 +1,7 @@
+[
+  {
+    "path": ".github/workflows/sphinx.yml",
+    "action": "delete",
+    "content": ""
+  }
+]
